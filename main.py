@@ -1,4 +1,5 @@
 # this function handles error catching with the eval function
+from config import *
 def improved_eval(n):
     try:
         output = eval(n)
@@ -19,8 +20,12 @@ def csv(filename):
 
 if __name__ == '__main__':
     sample = csv('Files/auto93.csv')
-    print(type(sample[2][2]))
-    print(sample[2][2])
-    print(sample)
+    config_the = get_the(csv_help)
+    config_the = cli(config_the)
+    print(config_the)
+
+    # print(type(sample[2][2]))
+    # print(sample[2][2])
+    # print(sample)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
