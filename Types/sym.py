@@ -10,7 +10,7 @@ class Sym:
         self.symbol_dictionary = {}
 
     def add(self, symbol):
-        if symbol is not "?":
+        if symbol != "?":
             self.items_seen = self.items_seen + 1
             self.symbol_dictionary[symbol] = self.symbol_dictionary.get(symbol, 0) + 1
 
