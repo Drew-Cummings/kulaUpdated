@@ -26,6 +26,7 @@ if __name__ == '__main__':
 
     test_table = {1: "str1", 2: "st2", 3: {1: "nest_str1", 2: "nest_str2"}}
     the(test_table)
+    the(config_the)
 
     # print(type(sample[2][2]))
     # print(sample[2][2])

@@ -6,15 +6,15 @@ def o(t):
     if type(t) is dict:
         u = {}
         for keys, values in t.items():
-            print(values)
+            # print(values)
             keys = str(keys)
             curr_pattern = re.compile("^_")
             # not starting with "_"
             # "help" is valid while "_help" isn't
             if len(re.findall(curr_pattern, keys)) == 0:
                 values = o(values)
-                for i in keys:
-                    print(i)
+                # for i in keys:
+                #     print(i)
             
             u[1+len(u)] = values
             
