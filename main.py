@@ -1,5 +1,5 @@
 # this function handles error catching with the eval function
-from config import *
+from eg.eg import *
 def improved_eval(n):
     try:
         output = eval(n)
@@ -23,6 +23,9 @@ if __name__ == '__main__':
     config_the = get_the(csv_help)
     config_the = cli(config_the)
     print(config_the)
+
+    test_table = {1: "str1", 2: "st2", 3: {1: "nest_str1", 2: "nest_str2"}}
+    the(test_table)
 
     # print(type(sample[2][2]))
     # print(sample[2][2])
