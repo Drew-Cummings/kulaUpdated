@@ -32,6 +32,6 @@ class Sym:
 
         for symbol, occurrence in self.symbol_dictionary.items():
             if occurrence > 0:
-                e = e + f(symbol/self.items_seen)
+                e = e - f(occurrence/self.items_seen)
 
         return e
