@@ -17,7 +17,7 @@ class Num:
 
     def nums(self):
         if not self.is_sorted:
-            self.numbers.sort()
+            self.numbers = dict(sorted(self.numbers.items()))
 
     def add(self, v):
         pos = -1
@@ -27,8 +27,8 @@ class Num:
                 self.lo = v
             if self.hi < v:
                 self.hi = v
-            if self.numbers.len() < self.max_nums:
-                pos = self.numbers.len()
+            if len(self.numbers) < self.max_nums:
+                pos = len(self.numbers)
             else:
                 rand = random.randint(0, self.items_seen)
                 if rand < self.max_nums - 1:

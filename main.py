@@ -28,6 +28,8 @@ if __name__ == '__main__':
     the(test_table)
     the(config_the)
 
+    num()
+    sym()
     # print(type(sample[2][2]))
     # print(sample[2][2])
     # print(sample)
