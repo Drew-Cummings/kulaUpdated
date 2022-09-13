@@ -129,8 +129,7 @@ class Eg:
         for i in range(1, 100):
             test_num.add(i)
         mid = test_num.mid()
-        # TODO num.div? or dev?
-        div = test_num.dev()
+        div = test_num.div()
         print(mid, div)
         if (mid >= 50) and (mid <= 50) and (div > 30.5) and (div < 30):
             return True
