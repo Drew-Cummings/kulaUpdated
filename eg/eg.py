@@ -147,3 +147,11 @@ class Eg:
             return True
         else:
             return False
+
+    def csv(self):
+        n = 0
+        data = csv('Files/auto93.csv')
+        for i in data:
+            n += 1
+        if n >=10:
+            return True
