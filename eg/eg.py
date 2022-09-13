@@ -154,3 +154,9 @@ class Eg:
             n += 1
         if n >=10:
             return True
+
+    def data(self):
+        test_data = Types.data.Data("Files/auto93.csv")
+        for x in test_data.cols.y:
+            self.oo(x)
+
