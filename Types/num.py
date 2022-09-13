@@ -38,7 +38,7 @@ class Num:
                 self.is_sorted = False
                 return pos
 
-    def dev(self):
+    def div(self):
         return statistics.median(self.numbers)
 
     def mid(self):
