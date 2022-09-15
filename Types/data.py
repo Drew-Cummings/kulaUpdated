@@ -1,7 +1,7 @@
-from cols import Cols
-from row import Row
-from csv import csv
-from num import Num
+from Types.cols import Cols
+from Types.row import Row
+from Types.csv import csv
+from Types.num import Num
 
 class Data:
 
