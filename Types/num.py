@@ -1,6 +1,5 @@
 import math
 import random
-import statistics
 
 
 class Num:
@@ -39,7 +38,10 @@ class Num:
                 return pos
 
     def div(self):
-        return statistics.median(self.numbers)
+        self.nums()
+        length = len(self.numbers)
+        return (self.numbers[.9 * length] - self.numbers[.1 * length]) / 2.58
 
     def mid(self):
-        return statistics.median(self.numbers)
+        self.nums()
+        return self.numbers[.5 * len(self.numbers)]

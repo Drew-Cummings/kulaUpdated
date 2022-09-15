@@ -1,6 +1,7 @@
 from Types import *
 from Configs.config import *
 import random
+import Types.data
 
 
 # def runs(test_func_str):
@@ -154,3 +155,22 @@ class Eg:
             n += 1
         if n >=10:
             return True
+
+    def data(self):
+        test_data = Types.data.Data("Files/auto93.csv")
+        for x in test_data.cols.y:
+            self.oo(x)
+
+    def stats(self):
+        test_data = Types.data.Data("Files/auto93.csv")
+
+        def div(col):
+            return col.div()
+
+        def mid(col):
+            return col.mid()
+
+        print("xmid", self.o(test_data.stats(2, test_data.cols.x, mid)))
+        print("xdiv", self.o(test_data.stats(3, test_data.cols.x, div)))
+        print("ymid", self.o(test_data.stats(2, test_data.cols.y, mid)))
+        print("ydiv", self.o(test_data.stats(3, test_data.cols.y, div)))
