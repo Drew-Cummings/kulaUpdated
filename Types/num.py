@@ -40,7 +40,9 @@ class Num:
     def div(self):
         self.nums()
         length = len(self.numbers)
-        return (self.numbers[.9 * length] - self.numbers[.1 * length]) / 2.58
+        x = self.numbers[int(.9 * length)]
+        y = self.numbers[int(.1 * length)]
+        return (x-y) / 2.58
 
     def mid(self):
         self.nums()

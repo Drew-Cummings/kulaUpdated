@@ -170,7 +170,7 @@ class Eg:
         def mid(col):
             return col.mid()
 
-        print("xmid", self.o(test_data.stats(2, test_data.cols.x, mid)))
-        print("xdiv", self.o(test_data.stats(3, test_data.cols.x, div)))
-        print("ymid", self.o(test_data.stats(2, test_data.cols.y, mid)))
-        print("ydiv", self.o(test_data.stats(3, test_data.cols.y, div)))
+        print("xmid", self.o(test_data.stats(2, test_data.cols.x, 'mid')))
+        print("xdiv", self.o(test_data.stats(3, test_data.cols.x, 'div')))
+        print("ymid", self.o(test_data.stats(2, test_data.cols.y, 'mid')))
+        print("ydiv", self.o(test_data.stats(3, test_data.cols.y, 'div')))

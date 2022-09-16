@@ -9,7 +9,8 @@ if __name__ == '__main__':
     print(config_the)
 
     eg = Eg(config_the)
-    eg.runs("ALL")
+    #eg.runs("ALL")
+    eg.stats()
     # print(type(sample[2][2]))
     # print(sample[2][2])
     # print(sample)
