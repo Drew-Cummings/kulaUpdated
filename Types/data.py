@@ -24,9 +24,9 @@ class Data:
             for row in self.rows[1:]:
                 nums.add(row.cells[col])
             if function == 'mid':
-                output[columns[col]] = nums.mid()
+                output[columns[col]] = round(nums.mid(), decimal)
             if function == 'div':
-                output[columns[col]] = nums.div()
+                output[columns[col]] = round(nums.div(), decimal)
         return output
 
 
