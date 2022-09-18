@@ -12,8 +12,8 @@ class Eg:
         """
         :param test_config: "the" config that get from the command line arguments
         """
-        self.function_table = {"BAD": self.BAD,
-                               "LIST": self.LIST,
+        self.function_table = {"LIST": self.LIST,
+                               # "BAD": self.BAD,
                                "ALL": self.ALL,
                                "LS": self.LS,
                                "the": self.the,
@@ -98,8 +98,8 @@ class Eg:
 
     def LS(self):
         print("\nExamples python csv -e ...")
-        for _, k in self.LIST().items():
-            print(f'\t{k}')
+        for n, f in self.LIST().items():
+            print(f'\t{n}')
         return True
 
     def ALL(self):
@@ -108,7 +108,7 @@ class Eg:
                 print("\n-----------------------------------")
                 if not self.runs(n):
                     self.fails += 1
-        return True
+        return self.fails
 
     # test case
     def the(self):
