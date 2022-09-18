@@ -40,10 +40,14 @@ class Num:
     def div(self):
         self.nums()
         length = len(self.numbers)
-        x = self.numbers[int(.9 * length)]
-        y = self.numbers[int(.1 * length)]
+        x = self.numbers[int(.9 * length) - 1]  # because zero-based index
+        y = self.numbers[int(.1 * length) - 1]
         return (x-y) / 2.58
 
     def mid(self):
         self.nums()
-        return self.numbers[.5 * len(self.numbers)]
+        mid_index = .5 * (len(self.numbers) + 1) - 1
+        if isinstance(mid_index, int):
+            return self.numbers[mid_index]
+        else:
+            return (self.numbers[math.floor(mid_index)] + self.numbers[math.ceil(mid_index)])/2

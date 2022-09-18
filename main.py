@@ -1,4 +1,3 @@
-# this function handles error catching with the eval function
 from eg.eg import *
 from Types.csv import csv
 
@@ -9,10 +8,6 @@ if __name__ == '__main__':
     print(config_the)
 
     eg = Eg(config_the)
-    #eg.runs("ALL")
-    eg.stats()
-    # print(type(sample[2][2]))
-    # print(sample[2][2])
-    # print(sample)
+    eg.ALL()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

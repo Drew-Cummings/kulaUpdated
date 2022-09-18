@@ -2,6 +2,7 @@ from Types import *
 from Configs.config import *
 import random
 import Types.data
+from Types.csv import csv
 
 
 # def runs(test_func_str):
@@ -18,7 +19,10 @@ class Eg:
                                "the": self.the,
                                "sym": self.sym,
                                "num": self.num,
-                               "bignum": self.bignum
+                               "bignum": self.bignum,
+                               "csv": self.csv,
+                               "data": self.data,
+                               "stats": self.stats
                                }
         self.fails = 0
         self.test_config = test_config
@@ -38,7 +42,7 @@ class Eg:
                     # for i in keys:
                     #     print(i)
 
-                u[1+len(u)] = values
+                u[1 + len(u)] = values
 
             # if len(t) == 0:
             output = "{"
@@ -84,7 +88,7 @@ class Eg:
         return out
 
     def BAD(self):
-        print("don't have this field!")
+        raise ValueError("Intentionally crashing this!")
 
     def LIST(self):
         t = {}
@@ -99,10 +103,10 @@ class Eg:
         return True
 
     def ALL(self):
-        for _, k in self.LIST().items():
-            if k != "ALL":
+        for n, f in self.LIST().items():
+            if n != "ALL":
                 print("\n-----------------------------------")
-                if not self.runs(k):
+                if not self.runs(n):
                     self.fails += 1
         return True
 
@@ -118,7 +122,7 @@ class Eg:
             test_sym.add(i)
         mode = test_sym.mid(1)
         entropy = test_sym.div()
-        entropy = (1000*entropy)//1/1000
+        entropy = (1000 * entropy) // 1 / 1000
         self.oo({mode, entropy})
         if (mode == "a") and (entropy >= 1.37) and (entropy <= 1.38):
             return True
@@ -127,23 +131,23 @@ class Eg:
 
     def num(self):
         test_num = Types.num.Num(0, "test_num", 100)
-        for i in range(1, 100):
+        for i in range(1, 101):
             test_num.add(i)
         mid = test_num.mid()
         div = test_num.div()
         print(mid, div)
-        if (mid >= 50) and (mid <= 50) and (div > 30.5) and (div < 30):
+        if (mid >= 50) and (mid <= 52) and (div > 30.5) and (div < 32):
             return True
         else:
             return False
 
     def bignum(self):
-        test_num = Types.num.Num(0, "test_bignum", 512)
-        nums = 32
+        test_num = Types.num.Num(0, "test_bignum", 32)
         for i in range(1, 1000):
             test_num.add(i)
         self.oo(test_num.nums())
         if len(test_num.numbers) == 32:
+            print(test_num.numbers)
             return True
         else:
             return False
@@ -151,15 +155,17 @@ class Eg:
     def csv(self):
         n = 0
         data = csv('Files/auto93.csv')
-        for i in data:
+        for _ in data:
             n += 1
-        if n >=10:
-            return True
+            if n > 10:
+                return True
+        return True
 
     def data(self):
         test_data = Types.data.Data("Files/auto93.csv")
         for x in test_data.cols.y:
             self.oo(x)
+        return True
 
     def stats(self):
         test_data = Types.data.Data("Files/auto93.csv")
@@ -174,3 +180,5 @@ class Eg:
         print("xdiv", self.o(test_data.stats(3, test_data.cols.x, 'div')))
         print("ymid", self.o(test_data.stats(2, test_data.cols.y, 'mid')))
         print("ydiv", self.o(test_data.stats(3, test_data.cols.y, 'div')))
+
+        return True
