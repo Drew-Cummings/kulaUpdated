@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/Drew-Cummings/kulaUpdated/workflows/build/badge.svg)](https://github.com/Drew-Cummings/kulaUpdated/actions)
+
 # kulaUpdated
 Repository For NCSU CSC 510 Fall 2022 Homeworks 2-5
 

@@ -13,7 +13,7 @@ class Eg:
         :param test_config: "the" config that get from the command line arguments
         """
         self.function_table = {"LIST": self.LIST,
-                               # "BAD": self.BAD,
+                               "BAD": self.BAD,
                                "ALL": self.ALL,
                                "LS": self.LS,
                                "the": self.the,
