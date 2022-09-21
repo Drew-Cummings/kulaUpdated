@@ -10,6 +10,8 @@ Repository For NCSU CSC 510 Fall 2022 Homeworks 2-5
 
 ## How to Use
 
+## Module and Class documentation
+See [documentation](https://drew-cummings.github.io/kulaUpdated/Types.html)
 
 ## Contributing
 Before contributing to the Group 34 Homeworks 2-5 please check out `CONTRIBUTING.md` for instructions. Also refer to [CODE_OF_CONDUCT.md]
