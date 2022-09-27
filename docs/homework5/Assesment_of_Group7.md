@@ -1,4 +1,4 @@
-This is the assessment for [Group 7](https://github.com/yzhu27/CSVAnalyser).s
+This is the assessment for [Group 7](https://github.com/yzhu27/CSVAnalyser).
 | Notes                                                                                                                                                                                    | Assessment | evidence                                                              |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------|
 | Video1                                                                                                                                                                                   |            || 
